@@ -37,12 +37,12 @@
   {{ end }}
   {{- template "_internal/twitter_cards.html" . }}
   {{ partial "seo_schema.html" . }}
+  {{ template "_internal/google_analytics_async.html" . }}
 </head>
 {{ $cdn_url := ""}}
   {{ if eq ( getenv "HUGO_ENV" ) "production" }}
           {{ with .Site.Params.cdn_url }}
               {{ $cdn_url = .}}
-           {{ end }}   
+           {{ end }}
   {{ end  }}
 {{ .Scratch.Set "cdn_url" $cdn_url }}
-
