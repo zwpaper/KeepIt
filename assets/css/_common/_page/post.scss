@@ -58,7 +58,27 @@
         }
 
         h3::before {
-            content: "|";
+            content: "##";
+            margin-right: 5px;
+            color: $light-post-link-color;
+
+            .dark-theme & {
+                color: $dark-post-link-color;
+            }
+        }
+
+        h4::before {
+            content: "###";
+            margin-right: 5px;
+            color: $light-post-link-color;
+
+            .dark-theme & {
+                color: $dark-post-link-color;
+            }
+        }
+
+        h5::before {
+            content: ">>>>";
             margin-right: 5px;
             color: $light-post-link-color;
 
@@ -150,7 +170,7 @@
             overflow: hidden;
         }
 
-     
+
 
         img[data-action="zoom"] {
             cursor: zoom-in;
@@ -177,7 +197,7 @@
         .copyright-item {
             margin: 5px 0;
         }
-        
+
         .dark-theme & {
             border-top: 1px solid $dark-border-color;
             border-bottom: 1px solid $dark-border-color;
